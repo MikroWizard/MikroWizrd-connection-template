@@ -1,0 +1,2848 @@
+[
+  {
+    "brand": "cisco",
+    "os_type": "ios-ssh-enable",
+    "display_name": "Cisco IOS - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "ios-ssh-noenable",
+    "display_name": "Cisco IOS - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 60,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "ios-telnet-enable",
+    "display_name": "Cisco IOS - Telnet - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "ios-telnet-noenable",
+    "display_name": "Cisco IOS - Telnet - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "ios-telnet-enable-nouser",
+    "display_name": "Cisco IOS - Telnet - Enable - No Username",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": null,
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "asa-ssh-enable",
+    "display_name": "Cisco ASA - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "<--- More --->",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal pager 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "wlc-ssh",
+    "display_name": "Cisco WLC - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ],
+      "ssh_interactive": true
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "User:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "config paging disable"
+    ],
+    "pre_logout_commands": [
+      "logout"
+    ]
+  },
+  {
+    "brand": "cisco",
+    "os_type": "smb-telnet",
+    "display_name": "Cisco SMB - Telnet - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "User Name:",
+      "password_pattern": "Password"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "procurve-ssh",
+    "display_name": "HP ProCurve - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "no page"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "procurve-ssh-v2",
+    "display_name": "HP ProCurve - SSH - No Enable v2",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "nno page"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "procurve-telnet",
+    "display_name": "HP ProCurve - Telnet - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "no page"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "flexfabric-ssh",
+    "display_name": "HP FlexFabric - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "screen-length disable"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "1920-ssh",
+    "display_name": "HP 1920 - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "_cmdline-mode on \n y",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "screen-length disable"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "h3c-ssh",
+    "display_name": "H3C - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "screen-length disable"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "hp",
+    "os_type": "a5120-ssh",
+    "display_name": "HP A5120 - SSH - No System View",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "screen-length disable"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "dell",
+    "os_type": "s4048-ssh",
+    "display_name": "Dell S4048 - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "dell",
+    "os_type": "5524-telnet",
+    "display_name": "Dell 5524 - Telnet - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "User:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal datadump"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "dell",
+    "os_type": "6248-telnet",
+    "display_name": "Dell 6248P - Telnet - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "User:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "aruba",
+    "os_type": "2930f-ssh",
+    "display_name": "Aruba 2930F - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "Press any key to continue",
+      "nno page"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "aruba",
+    "os_type": "s3500-ssh",
+    "display_name": "Aruba S3500 - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid input",
+        "Error",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "no paging"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "fortinet",
+    "os_type": "non-vdom",
+    "display_name": "FortiGate - SSH - Non-VDOM",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+\\s*#\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show full-configuration",
+      "show_interfaces": "get system interface",
+      "show_routing": "get router info routing-table all",
+      "show_arp": "get system arp",
+      "show_version": "get system status",
+      "show_log": "get log event"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "command parse error",
+        "unrecognized",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "config system console\n set output standard\n end"
+    ],
+    "pre_logout_commands": [
+      "quit\n"
+    ]
+  },
+  {
+    "brand": "fortinet",
+    "os_type": "vdom",
+    "display_name": "FortiGate - SSH - VDOM",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+\\s*#\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show full-configuration",
+      "show_interfaces": "get system interface",
+      "show_routing": "get router info routing-table all",
+      "show_arp": "get system arp",
+      "show_version": "get system status",
+      "show_log": "get log event"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "command parse error",
+        "unrecognized",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "config global\nconfig system console\n set output standard\n end\n end"
+    ],
+    "pre_logout_commands": [
+      "quit\n"
+    ]
+  },
+  {
+    "brand": "fortinet",
+    "os_type": "noninteractive",
+    "display_name": "FortiGate - SSH - NonInteractive",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ],
+      "is_non_interactive": true
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+\\s*#\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show full-configuration",
+      "show_interfaces": "get system interface",
+      "show_routing": "get router info routing-table all",
+      "show_arp": "get system arp",
+      "show_version": "get system status",
+      "show_log": "get log event"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "command parse error",
+        "unrecognized",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "config system console\n set output standard\n end"
+    ],
+    "pre_logout_commands": [
+      "quit\n"
+    ]
+  },
+  {
+    "brand": "fortinet",
+    "os_type": "banner",
+    "display_name": "FortiGate - SSH - Banner Prompt",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+\\s*#\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show full-configuration",
+      "show_interfaces": "get system interface",
+      "show_routing": "get router info routing-table all",
+      "show_arp": "get system arp",
+      "show_version": "get system status",
+      "show_log": "get log event"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "command parse error",
+        "unrecognized",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "config system console\n set output standard\n end"
+    ],
+    "pre_logout_commands": [
+      "quit\n"
+    ]
+  },
+  {
+    "brand": "paloalto",
+    "os_type": "panos-ssh",
+    "display_name": "Palo Alto - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ],
+      "login_pattern": "login as:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_routing": "show route",
+      "show_arp": "show arp all",
+      "show_version": "show system info",
+      "show_log": "show log system"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "set cli pager off"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "paloalto",
+    "os_type": "panos-9x",
+    "display_name": "Palo Alto v9.x - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ],
+      "login_pattern": "login as:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_routing": "show route",
+      "show_arp": "show arp all",
+      "show_version": "show system info",
+      "show_log": "show log system"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "set cli pager off"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "paloalto",
+    "os_type": "panos-v2",
+    "display_name": "Palo Alto - SSH v2",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 5,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ],
+      "login_pattern": "login as:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "set cli scripting-mode on",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_routing": "show route",
+      "show_arp": "show arp all",
+      "show_version": "show system info",
+      "show_log": "show log system"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "set cli scripting-mode on\nset cli pager off"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "paloalto",
+    "os_type": "panos-vector",
+    "display_name": "Palo Alto - SSH - Config (Vector)",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 10,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ],
+      "login_pattern": "login as:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "set cli pager off\n set cli config-output-format set\n",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_routing": "show route",
+      "show_arp": "show arp all",
+      "show_version": "show system info",
+      "show_log": "show log system"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "configure"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "juniper",
+    "os_type": "junos-ssh",
+    "display_name": "Juniper JunOS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 60,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ],
+      "login_pattern": "login:",
+      "password_pattern": "password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show configuration",
+      "show_interfaces": "show interfaces terse",
+      "show_routing": "show route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show log messages | last 50"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "---\\(more( \\d+%)?\\)---",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "error:",
+        "syntax error",
+        "unknown command"
+      ]
+    },
+    "post_login_commands": [
+      "set cli screen-length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "mikrotik",
+    "os_type": "routeros-banner",
+    "display_name": "MikroTik RouterOS - SSH - Banner",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 10,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\] ?>",
+        "\\] ?#"
+      ],
+      "login_pattern": "Login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "/export terse",
+      "show_interfaces": "/interface print",
+      "show_routing": "/ip route print",
+      "show_arp": "/ip arp print",
+      "show_version": ":put [/system resource get version]",
+      "show_log": "/log print"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "bad command",
+        "no such item",
+        "syntax error"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "/quit"
+    ]
+  },
+  {
+    "brand": "mikrotik",
+    "os_type": "routeros-noninteractive",
+    "display_name": "MikroTik RouterOS - SSH - NonInteractive",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 10,
+      "protocols": [
+        "ssh"
+      ],
+      "is_non_interactive": true
+    },
+    "prompt": {
+      "patterns": [
+        "\\] ?>",
+        "\\] ?#"
+      ],
+      "login_pattern": "Login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "/export terse",
+      "show_interfaces": "/interface print",
+      "show_routing": "/ip route print",
+      "show_arp": "/ip arp print",
+      "show_version": ":put [/system resource get version]",
+      "show_log": "/log print"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "bad command",
+        "no such item",
+        "syntax error"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "/quit"
+    ]
+  },
+  {
+    "brand": "mikrotik",
+    "os_type": "routeros-v2",
+    "display_name": "MikroTik RouterOS - SSH v2",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 10,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\] ?>",
+        "\\] ?#"
+      ],
+      "login_pattern": "Login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "/export terse",
+      "show_interfaces": "/interface print",
+      "show_routing": "/ip route print",
+      "show_arp": "/ip arp print",
+      "show_version": ":put [/system resource get version]",
+      "show_log": "/log print"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "bad command",
+        "no such item",
+        "syntax error"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "/quit"
+    ]
+  },
+  {
+    "brand": "brocade",
+    "os_type": "ssh",
+    "display_name": "Brocade - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error",
+        "Unrecognized command"
+      ]
+    },
+    "post_login_commands": [
+      "skip-page-display"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "checkpoint",
+    "os_type": "gaia-ssh",
+    "display_name": "Check Point Gaia OS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show configuration",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show log"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid"
+      ]
+    },
+    "post_login_commands": [
+      "set clienv rows 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "ciena",
+    "os_type": "6500-tl1",
+    "display_name": "Ciena 6500 - TL1",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "RTRV-CONFIG",
+      "show_interfaces": "RTRV-EQPT",
+      "show_routing": "RTRV-RTE",
+      "show_version": "RTRV-INV"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "DENY"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "ciena",
+    "os_type": "6500-tl1-telnet",
+    "display_name": "Ciena 6500 - TL1 - Telnet",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "RTRV-CONFIG",
+      "show_interfaces": "RTRV-EQPT",
+      "show_routing": "RTRV-RTE",
+      "show_version": "RTRV-INV"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "DENY"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "ruckus",
+    "os_type": "ssh-enable",
+    "display_name": "Ruckus - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "ruckus",
+    "os_type": "ssh-noenable",
+    "display_name": "Ruckus - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "sonicwall",
+    "os_type": "ssh",
+    "display_name": "SonicWall - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show log"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid"
+      ]
+    },
+    "post_login_commands": [
+      "terminal pager disable"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "sonicwall",
+    "os_type": "ssh-confirm",
+    "display_name": "SonicWall - SSH - Confirm Banner",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show log"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid"
+      ]
+    },
+    "post_login_commands": [
+      "terminal pager disable"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "ubiquiti",
+    "os_type": "unifi-ssh",
+    "display_name": "Ubiquiti UniFi - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "vyos",
+    "os_type": "ssh",
+    "display_name": "VyOS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "configure",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "set terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "extreme",
+    "os_type": "summit-ssh",
+    "display_name": "Extreme Summit - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "disable clipaging"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "allied_telesis",
+    "os_type": "ssh",
+    "display_name": "Allied Telesis - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "adtran",
+    "os_type": "telnet",
+    "display_name": "Adtran 900 - Telnet",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "adva",
+    "os_type": "ssh",
+    "display_name": "ADVA - SSH - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "audiocodes",
+    "os_type": "ssh",
+    "display_name": "AudioCodes - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "avaya",
+    "os_type": "4526-telnet",
+    "display_name": "Avaya 4526GTX - Telnet - No Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "telnet"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "avaya",
+    "os_type": "ers-ssh",
+    "display_name": "Avaya ERS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "calix",
+    "os_type": "axos-ssh",
+    "display_name": "Calix AXOS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "digi",
+    "os_type": "ix20-ssh",
+    "display_name": "DiGi IX20 - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "edge_core",
+    "os_type": "ssh",
+    "display_name": "Edge-Core - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "mellanox",
+    "os_type": "ssh",
+    "display_name": "Mellanox - SSH - Enable",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "quit"
+    ]
+  },
+  {
+    "brand": "nvidia",
+    "os_type": "ib-ssh",
+    "display_name": "NVIDIA InfiniBand - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "pfsense",
+    "os_type": "ssh",
+    "display_name": "pfSense - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "su",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "rad",
+    "os_type": "ssh",
+    "display_name": "RAD - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": null,
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "siemens",
+    "os_type": "ruggedcom-ssh",
+    "display_name": "Siemens RuggedCom ROS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "enable",
+      "prompt": "\\S+#"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "--More--",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "linux",
+    "os_type": "centos-ssh",
+    "display_name": "Linux CentOS - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\$\\s*$",
+        "#\\s*$"
+      ],
+      "login_pattern": "login:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "sudo -i",
+      "prompt": "#\\s*$"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": false
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "post_login_commands": [],
+    "pre_logout_commands": [
+      "exit"
+    ]
+  },
+  {
+    "brand": "huawei",
+    "os_type": "vrp-ssh",
+    "display_name": "Huawei VRP - SSH",
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "timeout": 30,
+      "protocols": [
+        "ssh"
+      ]
+    },
+    "prompt": {
+      "patterns": [
+        "\\<[\\w\\-]+\\>",
+        "\\[[\\w\\-]+\\]"
+      ],
+      "login_pattern": "Username:",
+      "password_pattern": "Password:"
+    },
+    "privilege_escalation": {
+      "command": "system-view",
+      "prompt": "\\[\\S+\\]"
+    },
+    "commands": {
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_routing": "show ip route",
+      "show_arp": "show arp",
+      "show_version": "show version",
+      "show_log": "show logging"
+    },
+    "pagination": {
+      "enabled": true,
+      "pattern": "---- More ----",
+      "key": "space"
+    },
+    "error_patterns": {
+      "patterns": [
+        "Error:",
+        "Unrecognized",
+        "Incomplete"
+      ]
+    },
+    "post_login_commands": [
+      "screen-length 0 temporary"
+    ],
+    "pre_logout_commands": [
+      "return",
+      "quit"
+    ]
+  }
+]
