@@ -42,7 +42,13 @@ history.
 
 1. Edit the file under `catalog/templates/` (content only; the build bumps `revision`).
 2. Add a line to `changelog` describing the change.
-3. Open a pull request: CI builds the catalog and validates every regular expression.
+3. Open a pull request: CI builds the catalog and validates it: every template carries every field
+   (`null` when unused), no unknown fields, and every regular expression compiles.
+
+`display_name` is set by MikroWizard (read-only for system templates); changing it also bumps the
+revision. A new template field (a new `device_templates` column) needs a MikroWizard release first:
+add it to `CONTENT_FIELDS` and `FIELD_MIN_APP_VERSION` in `tools/catalog_tool.py` (and in MikroWizard),
+then templates that use it must set `min_app_version` to that release.
 
 ## Release (maintainers, offline key)
 

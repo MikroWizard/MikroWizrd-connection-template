@@ -30,6 +30,14 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey,
 CONTENT_FIELDS = ("protocol", "connection", "prompt", "privilege_escalation", "commands", "pagination",
                   "error_patterns", "post_login_commands", "pre_logout_commands", "diff_exclusions",
                   "pre_connect", "post_disconnect", "config_mode")
+IDENTITY_FIELDS = ("brand", "os_type")
+MANAGED_FIELDS = ("display_name",)          # MikroWizard-owned: always applied, not in content_hash
+KNOWN_FIELDS = IDENTITY_FIELDS + MANAGED_FIELDS + CONTENT_FIELDS
+# First MikroWizard version that understands each field. A template that uses a field (non-null)
+# must have min_app_version >= that version, so older servers never apply half a template.
+# Adding a device_templates column: add it to CONTENT_FIELDS here AND in py/libs/template_catalog.py,
+# with the release that adds the column.
+FIELD_MIN_APP_VERSION = {f: "2.1.2" for f in KNOWN_FIELDS}
 PRO_PROTOCOLS = ("rdp", "vnc")
 
 
@@ -53,6 +61,34 @@ def add_field_hashes(entry, content):
 
 def content_hash(content):
     return hashlib.sha256(canon({f: content.get(f) for f in CONTENT_FIELDS}).encode("utf-8")).hexdigest()
+
+
+def tracked_hash(content):
+    """Everything an install receives (content + display_name): a change here bumps the revision."""
+    return hashlib.sha256(canon({f: content.get(f) for f in MANAGED_FIELDS + CONTENT_FIELDS}).encode("utf-8")).hexdigest()
+
+
+def version_tuple(v):
+    return tuple(int("".join(ch for ch in p if ch.isdigit()) or 0) for p in str(v or "0").split("."))
+
+
+def regexes(content):
+    """Every regular expression the MikroWizard device connector compiles from a template."""
+    prompt = content.get("prompt") if isinstance(content.get("prompt"), dict) else {}
+    esc = content.get("privilege_escalation") if isinstance(content.get("privilege_escalation"), dict) else {}
+    pag = content.get("pagination") if isinstance(content.get("pagination"), dict) else {}
+    out = [("prompt pattern", p) for p in (prompt.get("patterns") or [])]
+    out += [("prompt.login_pattern", prompt.get("login_pattern")), ("prompt.password_pattern", prompt.get("password_pattern")),
+            ("privilege_escalation.prompt", esc.get("prompt")),
+            ("privilege_escalation.password_prompt", esc.get("password_prompt")),
+            ("privilege_escalation.success_pattern", esc.get("success_pattern")), ("pagination.pattern", pag.get("pattern"))]
+    ep = content.get("error_patterns")
+    out += [("error pattern", p) for p in ((ep.get("patterns") or []) if isinstance(ep, dict) else (ep if isinstance(ep, list) else []))]
+    de = content.get("diff_exclusions")
+    for section, rules in (de.items() if isinstance(de, dict) else []):
+        for r in (rules if isinstance(rules, list) else []):
+            out.append(("diff_exclusions." + section, r.get("pattern") if isinstance(r, dict) else r))
+    return [(w, p) for w, p in out if isinstance(p, str) and p]
 
 
 def keygen(a):
@@ -122,17 +158,25 @@ def validate(catalog):
         seen.add(key)
         if not isinstance(t.get("revision"), int) or t["revision"] < 1:
             errors.append("{}: revision".format(key))
-        for p in ((c.get("prompt") or {}).get("patterns") or []):
+        unknown = sorted(set(c) - set(KNOWN_FIELDS))
+        if unknown:
+            errors.append("{}: unknown fields {} (add them to CONTENT_FIELDS first)".format(key, unknown))
+        missing = [f for f in KNOWN_FIELDS if f not in c]
+        if missing:
+            errors.append("{}: missing fields {} (write null for unused ones)".format(key, missing))
+        for f in IDENTITY_FIELDS + MANAGED_FIELDS + ("protocol",):
+            if not c.get(f):
+                errors.append("{}: {} is empty".format(key, f))
+        need = max([version_tuple(FIELD_MIN_APP_VERSION[f]) for f in c if f in FIELD_MIN_APP_VERSION and c[f] is not None]
+                   or [(0,)])
+        if version_tuple(t.get("min_app_version")) < need:
+            errors.append("{}: min_app_version {} is lower than {} needed by its fields".format(
+                key, t.get("min_app_version"), ".".join(map(str, need))))
+        for what, p in regexes(c):
             try:
                 re.compile(p)
             except re.error as e:
-                errors.append("{}: prompt pattern {!r}: {}".format(key, p, e))
-        ep = c.get("error_patterns")
-        for p in ((ep or {}).get("patterns") or [] if isinstance(ep, dict) else (ep or [])):
-            try:
-                re.compile(p)
-            except re.error as e:
-                errors.append("{}: error pattern {!r}: {}".format(key, p, e))
+                errors.append("{}: {} {!r}: {}".format(key, what, p, e))
     return errors
 
 
@@ -147,7 +191,7 @@ def build(a):
         version = version or old["catalog_version"] + 1
     for e in entries:
         p = prev.get(e["key"])
-        if p and content_hash(p["content"]) != content_hash(e["content"]):
+        if p and tracked_hash(p["content"]) != tracked_hash(e["content"]):
             e["revision"] = max(e["revision"], p["revision"] + 1)
             hashes = list(p.get("previous_hashes") or []) + list(e.get("previous_hashes") or []) + [content_hash(p["content"])]
             e["previous_hashes"] = sorted(set(hashes))
