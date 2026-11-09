@@ -1,0 +1,104 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "linux",
+    "commands": {
+      "show_arp": "arp -n",
+      "show_config": "cat /etc/network/interfaces 2>/dev/null || cat /etc/networks 2>/dev/null || echo no-config",
+      "show_interfaces": "ip addr show",
+      "show_log": "journalctl -n 50 --no-pager 2>/dev/null || dmesg | tail -50",
+      "show_routing": "ip route show",
+      "show_version": "uname -a"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "Linux (Generic)",
+    "error_patterns": {
+      "patterns": [
+        "command not found",
+        "No such file"
+      ]
+    },
+    "os_type": "generic",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": {
+      "command": "sudo -i",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "#\\s*$"
+    },
+    "prompt": {
+      "login_pattern": "login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\$\\s*$",
+        "#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "linux/generic",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "e6bc561f33657eee6d28447620dd93af94783fa7d81a543f8c72300db7c4e6ef"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "4059e80ba15e42809223c9fd60ad8bd35cd371531151c69ec542e7ccff757c3e"
+    ],
+    "diff_exclusions": [
+      "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    ],
+    "error_patterns": [
+      "e6877991f718167ed2319ffa4c60f4bd9bbdba3a2184b4f1305b58cb4abcf948"
+    ],
+    "pagination": [
+      "5acf3ff77b4420677b5923071f303facaba7a9273a346284a667a275df325146"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "ac6a7531fc41d6436331f8399292704e78f9a4349374b65b1a04cf1d2e0bbf11"
+    ],
+    "privilege_escalation": [
+      "6bcb9ab07d0f4d42dc33b12d317d309d1a922e54553926f2b5cdd32c0b25ba8b"
+    ],
+    "prompt": [
+      "4aa261ce63e241b2f9a52725a4efeb82d1609876768fdae40e6b4ca309587a81"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "8eef64e3e7b8aee0fcdd22b27ffd443194c94d286fdf0bd54240665d80399162"
+  ],
+  "revision": 1
+}

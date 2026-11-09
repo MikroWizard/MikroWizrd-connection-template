@@ -1,0 +1,54 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "generic",
+    "commands": {},
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "Generic Device",
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "os_type": "generic",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "(?:login|Username).*:",
+      "password_pattern": "Password:",
+      "patterns": [
+        ">\\s*$",
+        "#\\s*$",
+        "\\$\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "generic/generic",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

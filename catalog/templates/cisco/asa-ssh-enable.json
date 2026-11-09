@@ -1,0 +1,152 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "cisco",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": {
+      "enter": "configure terminal",
+      "exit": "end",
+      "save": null
+    },
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {
+      "global": [
+        {
+          "flags": "",
+          "pattern": "^!\\s*Last configuration change at.*$"
+        },
+        {
+          "flags": "",
+          "pattern": "^!\\s*NVRAM config last updated at.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*No configuration change since.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Configuration last modified by.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^.*uptime is.*$"
+        }
+      ],
+      "show_config": [
+        {
+          "flags": "",
+          "pattern": "^!\\s*Time:.*$"
+        },
+        {
+          "flags": "",
+          "pattern": "^Current configuration : \\d+ bytes$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^Building configuration\\.\\.\\.$"
+        }
+      ]
+    },
+    "display_name": "Cisco ASA - SSH - Enable",
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "os_type": "asa-ssh-enable",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "<--- More --->"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal pager 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": {
+      "command": "enable",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "cisco/asa-ssh-enable",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "b29c39164b92b990a5feefeea1239ec7876ae9240563b19b046685a3855450a3"
+    ],
+    "config_mode": [
+      "66c42020c6f9eac2ae88add59752c6f725f239240d87822fd88c687ee3e53633"
+    ],
+    "connection": [
+      "b2dfc86f5bc794c04c78d3286f34c84c4bd38ae941d9fa2b0c640bc19a3d9406"
+    ],
+    "diff_exclusions": [
+      "a025db80e328252453e8244cabe7f12e333233cd10353db519c8fa322c1711dc"
+    ],
+    "error_patterns": [
+      "cb36e4602c4630534fd7dc54d27b6f43124c32713d0c632307003e6b1f37c099"
+    ],
+    "pagination": [
+      "78a663831418848b4037f47419c82a8c4b89b71942cf8bc42c17da53998a4c27"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "4c46b62c585e1d97c2b23a68b7db8c29d223402af82eaf950b095c2e1e09d99c"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "744f3a466d8f8ec11ba15fd717e9ce576413824666796b232c1f599e5cae0755"
+    ],
+    "privilege_escalation": [
+      "0795d5e2eb9cb9e3ac0c866b2c438efff92837cd5ee798399c9bb23a38f41205"
+    ],
+    "prompt": [
+      "df7cde2036ddf178fe32d0cbb891bf54f36ae6b4e1ec0a49f35918862d9b9d65"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "512dd7b96a26bd2ad77874b4febad6800304b287b195a0965fd195ba841beea1"
+  ],
+  "revision": 1
+}

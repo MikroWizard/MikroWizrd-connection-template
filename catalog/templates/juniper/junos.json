@@ -1,0 +1,123 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "juniper",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show configuration",
+      "show_interfaces": "show interfaces terse",
+      "show_log": "show log messages | last 50",
+      "show_routing": "show route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^##?\\s*Last (changed|commit).*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^##?\\s*commit-time:.*$"
+        }
+      ]
+    },
+    "display_name": "Juniper JunOS",
+    "error_patterns": {
+      "patterns": [
+        "error:",
+        "syntax error",
+        "unknown command"
+      ]
+    },
+    "os_type": "junos",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "---\\(more( \\d+%)?\\)---"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "set cli screen-length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": {
+      "command": "configure",
+      "password_prompt": "",
+      "success_pattern": "\\S+@\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "juniper/junos",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "2d26458b8db1aea060c2620637b0e0f870153ade3a838a393a4e13fcab06ff4e"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "b2dfc86f5bc794c04c78d3286f34c84c4bd38ae941d9fa2b0c640bc19a3d9406"
+    ],
+    "diff_exclusions": [
+      "dc921581fb9a027add167761d7dffca9e929e5a162901d94e73cd35a824fcbee"
+    ],
+    "error_patterns": [
+      "aa41612ee7f4ed730b9675bd321f7987f7edf5abfbab8a90736c739d250cbaa0"
+    ],
+    "pagination": [
+      "de49415efbdaaf1632c540fd945df15503d551d83f1e92312ea05816048420d1"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "b30a1ebdcd142e53be3eab224eaed008fb5e1a5c6571bc564fd938c5b0fbc0e6"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "ac6a7531fc41d6436331f8399292704e78f9a4349374b65b1a04cf1d2e0bbf11"
+    ],
+    "privilege_escalation": [
+      "e5ffe2451bbb0c5ebe074b03cd11ee58927957c9d7580dddbc82fe7d15276dbe"
+    ],
+    "prompt": [
+      "39fe243d552d0e1df01a0c1890cbb218277f39682767197da4bd8432760e4e3a"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "81776fe549bbc9ab13c457fec3516858381d0f6c00845620fe4ce91b6f48b3ca"
+  ],
+  "revision": 1
+}

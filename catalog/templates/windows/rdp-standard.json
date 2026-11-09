@@ -1,0 +1,49 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "windows",
+    "commands": null,
+    "config_mode": null,
+    "connection": {
+      "color_depth": 32,
+      "disable_audio": false,
+      "dpi": 96,
+      "enable_audio_input": false,
+      "enable_desktop_composition": true,
+      "enable_font_smoothing": true,
+      "enable_full_window_drag": true,
+      "enable_menu_animations": false,
+      "enable_printing": false,
+      "enable_theming": true,
+      "enable_wallpaper": true,
+      "ignore_cert": true,
+      "port": 3389,
+      "protocol": "rdp",
+      "protocols": [
+        "rdp"
+      ],
+      "security": "any",
+      "server_layout": "en-us-qwerty",
+      "timezone": "UTC"
+    },
+    "diff_exclusions": {},
+    "display_name": "Standard Office RDP (Full Desktop)",
+    "error_patterns": null,
+    "os_type": "rdp-standard",
+    "pagination": null,
+    "post_disconnect": [],
+    "post_login_commands": null,
+    "pre_connect": [],
+    "pre_logout_commands": null,
+    "privilege_escalation": null,
+    "prompt": null,
+    "protocol": "rdp"
+  },
+  "edition": "pro",
+  "key": "windows/rdp-standard",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

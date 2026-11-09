@@ -1,0 +1,62 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "avaya",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "telnet"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "Avaya 4526GTX - Telnet - No Enable",
+    "error_patterns": {
+      "patterns": [
+        "Invalid",
+        "Error"
+      ]
+    },
+    "os_type": "4526-telnet",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "telnet"
+  },
+  "edition": "free",
+  "key": "avaya/4526-telnet",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

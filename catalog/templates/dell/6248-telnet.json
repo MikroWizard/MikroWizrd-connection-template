@@ -1,0 +1,127 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "dell",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "telnet"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Time:\\s*.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Last configuration change at.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*System Description.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Current Configuration.*$"
+        }
+      ]
+    },
+    "display_name": "Dell 6248P - Telnet - Enable",
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Error"
+      ]
+    },
+    "os_type": "6248-telnet",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": {
+      "command": "enable",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "User:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "telnet"
+  },
+  "edition": "free",
+  "key": "dell/6248-telnet",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "b29c39164b92b990a5feefeea1239ec7876ae9240563b19b046685a3855450a3"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "ca88abd09297fe18f319989c4262572cda2bf076edd7836cfb5b5bc29c7950f4"
+    ],
+    "diff_exclusions": [
+      "c502acfe3636751e9bf9c4fcf8ec86e59f7dfc364d1361c784130196201baaed"
+    ],
+    "error_patterns": [
+      "dab15fbfd04c9334a69844207c43d989e455e414cfc936f785541b57bf4432a1"
+    ],
+    "pagination": [
+      "5acf3ff77b4420677b5923071f303facaba7a9273a346284a667a275df325146"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "496cf96c4a5ab9c866957fb3d63ad10886f0ca5b4c1d90fac5253256eca513a4"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "744f3a466d8f8ec11ba15fd717e9ce576413824666796b232c1f599e5cae0755"
+    ],
+    "privilege_escalation": [
+      "0795d5e2eb9cb9e3ac0c866b2c438efff92837cd5ee798399c9bb23a38f41205"
+    ],
+    "prompt": [
+      "130a7d8e9c898e054df51a1e3331df1f8be24cc142b8224f55c2951593e867cb"
+    ],
+    "protocol": [
+      "05497b0c1fa09d5433e6bc592c6192a7273da3f7cf1770471ccd662a2e2e0d8d"
+    ]
+  },
+  "previous_hashes": [
+    "dd6bd82bb9185e60a408cbd6e761f8157df845fe9cb9d3a7231e92cf57626016"
+  ],
+  "revision": 1
+}

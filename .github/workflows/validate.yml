@@ -1,0 +1,15 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install cryptography
+      - name: Build and validate the catalog (no signing in CI)
+        run: python3 tools/catalog_tool.py build --src catalog --out /tmp/catalog.json
+      - name: Verify the published catalog signature
+        run: python3 tools/catalog_tool.py verify --pub public.b64 dist/catalog.json

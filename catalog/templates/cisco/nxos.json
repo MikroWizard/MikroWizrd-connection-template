@@ -1,0 +1,102 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "cisco",
+    "commands": {
+      "show_arp": "show ip arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interface brief",
+      "show_log": "show logging last 50",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": {
+      "enter": "configure terminal",
+      "exit": "end",
+      "save": null
+    },
+    "connection": {
+      "default_port_ssh": 22,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {
+      "global": [
+        {
+          "flags": "",
+          "pattern": "^!\\s*Last configuration change at.*$"
+        },
+        {
+          "flags": "",
+          "pattern": "^!\\s*NVRAM config last updated at.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*No configuration change since.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Configuration last modified by.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^.*uptime is.*$"
+        }
+      ],
+      "show_config": [
+        {
+          "flags": "",
+          "pattern": "^!\\s*Time:.*$"
+        },
+        {
+          "flags": "",
+          "pattern": "^Current configuration : \\d+ bytes$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^Building configuration\\.\\.\\.$"
+        }
+      ]
+    },
+    "display_name": "Cisco NX-OS",
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Ambiguous",
+        "Error"
+      ]
+    },
+    "os_type": "nxos",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "cisco/nxos",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

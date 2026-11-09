@@ -1,0 +1,109 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "zte",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interface brief",
+      "show_log": "show log",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh",
+        "telnet"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "ZTE ZXR10",
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Unrecognized"
+      ]
+    },
+    "os_type": "zxr10",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": {
+      "command": "enable",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "zte/zxr10",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "56b767fa1ef24481a133ac790393b89e28f7f8b598da21abf70a97cb8ff85105"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "b2dfc86f5bc794c04c78d3286f34c84c4bd38ae941d9fa2b0c640bc19a3d9406"
+    ],
+    "diff_exclusions": [
+      "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    ],
+    "error_patterns": [
+      "ab6ee7d6b9797561a07c6b77e68ae88dd9118a2be089acbc032bf90e1e13ddb0"
+    ],
+    "pagination": [
+      "4ebb2d95b6a7e32a3d978483949cd6d9e550253b986a909c2268e6273031a058"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "496cf96c4a5ab9c866957fb3d63ad10886f0ca5b4c1d90fac5253256eca513a4"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "ac6a7531fc41d6436331f8399292704e78f9a4349374b65b1a04cf1d2e0bbf11"
+    ],
+    "privilege_escalation": [
+      "0795d5e2eb9cb9e3ac0c866b2c438efff92837cd5ee798399c9bb23a38f41205"
+    ],
+    "prompt": [
+      "8c7903fe41b00da27e77ebcf75f03344bca65c0365ec2723d52ee35940665fce"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "b7ff59952937f990c7e4191aa7d765c167bdd3e463e69bfa370f0852057bae28"
+  ],
+  "revision": 1
+}

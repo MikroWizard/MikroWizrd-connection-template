@@ -1,0 +1,55 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "ciena",
+    "commands": {
+      "show_config": "RTRV-CONFIG",
+      "show_interfaces": "RTRV-EQPT",
+      "show_routing": "RTRV-RTE",
+      "show_version": "RTRV-INV"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "Ciena 6500 - TL1",
+    "error_patterns": {
+      "patterns": [
+        "DENY"
+      ]
+    },
+    "os_type": "6500-tl1",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "ciena/6500-tl1",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

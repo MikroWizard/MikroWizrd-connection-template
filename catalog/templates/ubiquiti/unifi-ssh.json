@@ -1,0 +1,118 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "ubiquiti",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^#\\s*(Last (modified|changed|saved)|Configuration generated).*$"
+        }
+      ]
+    },
+    "display_name": "Ubiquiti UniFi - SSH",
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "os_type": "unifi-ssh",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": {
+      "command": "enable",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "ubiquiti/unifi-ssh",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "b29c39164b92b990a5feefeea1239ec7876ae9240563b19b046685a3855450a3"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "cd3beded5040a841c9e9e1a5e0091c17fe5d0be89e71f23e6bcfbb1b46f8abb2"
+    ],
+    "diff_exclusions": [
+      "2d5cd559faff4f17f9a25e08ecc7f451333c60e632289dded7ce54c06ab2a9bc"
+    ],
+    "error_patterns": [
+      "2b40f8bfb09ac2e23915b13cb31b163ad4a7155ce0e768d14b73a89e8acace7d"
+    ],
+    "pagination": [
+      "4ebb2d95b6a7e32a3d978483949cd6d9e550253b986a909c2268e6273031a058"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "496cf96c4a5ab9c866957fb3d63ad10886f0ca5b4c1d90fac5253256eca513a4"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "ac6a7531fc41d6436331f8399292704e78f9a4349374b65b1a04cf1d2e0bbf11"
+    ],
+    "privilege_escalation": [
+      "0795d5e2eb9cb9e3ac0c866b2c438efff92837cd5ee798399c9bb23a38f41205"
+    ],
+    "prompt": [
+      "df7cde2036ddf178fe32d0cbb891bf54f36ae6b4e1ec0a49f35918862d9b9d65"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "62728cf3f03d6a0ff5216c8432a1b1eca83360a6ea9f3611e31c92037b80d71d"
+  ],
+  "revision": 1
+}

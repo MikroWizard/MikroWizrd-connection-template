@@ -1,0 +1,74 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "fortinet",
+    "commands": {
+      "show_arp": "get system arp",
+      "show_config": "show full-configuration",
+      "show_interfaces": "get system interface",
+      "show_log": "get log event",
+      "show_routing": "get router info routing-table all",
+      "show_version": "get system status"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^#\\s*(config-version|date|time|build|timestamp)\\s*[:=].*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^#\\s*building-configuration.*$"
+        }
+      ]
+    },
+    "display_name": "FortiGate - SSH - Non-VDOM",
+    "error_patterns": {
+      "patterns": [
+        "command parse error",
+        "unrecognized",
+        "Error"
+      ]
+    },
+    "os_type": "non-vdom",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "config system console\n set output standard\n end"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit\n"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+\\s*#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "fortinet/non-vdom",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

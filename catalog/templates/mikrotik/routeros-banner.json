@@ -1,0 +1,82 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "mikrotik",
+    "commands": {
+      "show_arp": "/ip arp print",
+      "show_config": "/export terse{export_flags}",
+      "show_interfaces": "/interface print",
+      "show_log": "/log print",
+      "show_routing": "/ip route print",
+      "show_version": ":put [/system resource get version]"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "",
+          "pattern": "^#\\s+.*?\\s+by\\s+RouterOS.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^#\\s*(software|system)\\s*id\\s*=.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^#\\s*model\\s*=.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^#\\s*serial\\s*number\\s*=.*$"
+        },
+        {
+          "flags": "",
+          "pattern": "^#\\s*$"
+        }
+      ]
+    },
+    "display_name": "MikroTik RouterOS - SSH - Banner",
+    "error_patterns": {
+      "patterns": [
+        "bad command",
+        "no such item",
+        "syntax error"
+      ]
+    },
+    "os_type": "routeros-banner",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "/quit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\[[^\\]\\r\\n]+@[^\\]\\r\\n]+\\][^\\r\\n]*?[>#]\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "mikrotik/routeros-banner",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

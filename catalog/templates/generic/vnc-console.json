@@ -1,0 +1,36 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "generic",
+    "commands": null,
+    "config_mode": null,
+    "connection": {
+      "color_depth": 24,
+      "port": 5900,
+      "protocol": "vnc",
+      "protocols": [
+        "vnc"
+      ],
+      "read_only": false
+    },
+    "diff_exclusions": {},
+    "display_name": "VNC Console Minimal",
+    "error_patterns": null,
+    "os_type": "vnc-console",
+    "pagination": null,
+    "post_disconnect": [],
+    "post_login_commands": null,
+    "pre_connect": [],
+    "pre_logout_commands": null,
+    "privilege_escalation": null,
+    "prompt": null,
+    "protocol": "vnc"
+  },
+  "edition": "pro",
+  "key": "generic/vnc-console",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

@@ -1,0 +1,59 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "rad",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "RAD - SSH",
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid",
+        "Unrecognized"
+      ]
+    },
+    "os_type": "ssh",
+    "pagination": {
+      "enabled": false
+    },
+    "post_disconnect": [],
+    "post_login_commands": [],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Username:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "rad/ssh",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

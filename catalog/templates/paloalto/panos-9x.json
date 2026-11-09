@@ -1,0 +1,63 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "paloalto",
+    "commands": {
+      "show_arp": "show arp all",
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_log": "show log system",
+      "show_routing": "show route",
+      "show_version": "show system info"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {},
+    "display_name": "Palo Alto v9.x - SSH",
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "os_type": "panos-9x",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "set cli pager off"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "login as:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "paloalto/panos-9x",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

@@ -1,0 +1,109 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "checkpoint",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show configuration",
+      "show_interfaces": "show interfaces",
+      "show_log": "show log",
+      "show_routing": "show route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 30
+    },
+    "diff_exclusions": {},
+    "display_name": "Check Point Gaia OS - SSH",
+    "error_patterns": {
+      "patterns": [
+        "Error",
+        "Invalid"
+      ]
+    },
+    "os_type": "gaia-ssh",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "set clienv rows 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": {
+      "command": "enable",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "checkpoint/gaia-ssh",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "91cdbfb27fb10932e541d83aefb06d49de7c5dafa0fbfe48f815a444f98d6a83"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "cd3beded5040a841c9e9e1a5e0091c17fe5d0be89e71f23e6bcfbb1b46f8abb2"
+    ],
+    "diff_exclusions": [
+      "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    ],
+    "error_patterns": [
+      "ffd919e852cbb98b500f662b6c704db6dc284c4897c7639de931d5c585c8a017"
+    ],
+    "pagination": [
+      "4ebb2d95b6a7e32a3d978483949cd6d9e550253b986a909c2268e6273031a058"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "ec35c8aeccb52c8d4f5b889dc425e9887ec78a7ec0baca8cb89774935eea6979"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "ac6a7531fc41d6436331f8399292704e78f9a4349374b65b1a04cf1d2e0bbf11"
+    ],
+    "privilege_escalation": [
+      "0795d5e2eb9cb9e3ac0c866b2c438efff92837cd5ee798399c9bb23a38f41205"
+    ],
+    "prompt": [
+      "cc7cdb593de8c82fc5f26c22222b85fac2fca12cc17ade4992aed6f38fb08342"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "5146fb2152e1a939d8032e3680d394401671d245a69e71ef0ea73f88cc1d30bc"
+  ],
+  "revision": 1
+}

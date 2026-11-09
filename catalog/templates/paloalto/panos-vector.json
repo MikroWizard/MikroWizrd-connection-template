@@ -1,0 +1,110 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x); privilege escalation in the current format"
+  ],
+  "content": {
+    "brand": "paloalto",
+    "commands": {
+      "show_arp": "show arp all",
+      "show_config": "show config running",
+      "show_interfaces": "show interfaces all",
+      "show_log": "show log system",
+      "show_routing": "show route",
+      "show_version": "show system info"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {},
+    "display_name": "Palo Alto - SSH - Config (Vector)",
+    "error_patterns": {
+      "patterns": [
+        "Syntax error",
+        "Invalid command",
+        "Error"
+      ]
+    },
+    "os_type": "panos-vector",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "configure"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": {
+      "command": "set cli pager off\n set cli config-output-format set\n",
+      "password_prompt": "[Pp]assword:?",
+      "success_pattern": "\\S+#"
+    },
+    "prompt": {
+      "login_pattern": "login as:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "paloalto/panos-vector",
+  "min_app_version": "2.1.2",
+  "previous_field_hashes": {
+    "commands": [
+      "92643308d9c7560450f25eeb9401c68712c99157d86b0d0a2db081860bd90e41"
+    ],
+    "config_mode": [
+      "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    ],
+    "connection": [
+      "d35b18f91ca23016c0a0972df0bde2b73ed674d1011062893af9489d2dd4bff6"
+    ],
+    "diff_exclusions": [
+      "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    ],
+    "error_patterns": [
+      "5ff835c0921c06d36ff8f3c2e6c5108abb3e9fe954ac7095239d1963ae75716b"
+    ],
+    "pagination": [
+      "4ebb2d95b6a7e32a3d978483949cd6d9e550253b986a909c2268e6273031a058"
+    ],
+    "post_disconnect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "post_login_commands": [
+      "82919815a9aa5762b789059dd8b1d77991fd20f8b817fb60c1a9fd471ab10268"
+    ],
+    "pre_connect": [
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "pre_logout_commands": [
+      "744f3a466d8f8ec11ba15fd717e9ce576413824666796b232c1f599e5cae0755"
+    ],
+    "privilege_escalation": [
+      "f1d22ac383b7583ad3a0f841bfd37d8df328dd84e175fec933eaa18829a4f5e0"
+    ],
+    "prompt": [
+      "f3cce154ffad03cfa2cfea336402de32ecd5a09677c78deba3ce9dbddb226d46"
+    ],
+    "protocol": [
+      "ee8e7f87a8e52166ff96301f1aa67c06980a22f9d1e295a7ed8cb0a1e1c76e22"
+    ]
+  },
+  "previous_hashes": [
+    "5a7d231b0093fd71ab3ea166bd5a4f3e2d7cd225a96e767ce15a455a51b008d0"
+  ],
+  "revision": 1
+}

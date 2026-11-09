@@ -1,0 +1,75 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "juniper",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show configuration",
+      "show_interfaces": "show interfaces terse",
+      "show_log": "show log messages | last 50",
+      "show_routing": "show route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^##?\\s*Last (changed|commit).*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^##?\\s*commit-time:.*$"
+        }
+      ]
+    },
+    "display_name": "Juniper JunOS - SSH",
+    "error_patterns": {
+      "patterns": [
+        "error:",
+        "syntax error",
+        "unknown command"
+      ]
+    },
+    "os_type": "junos-ssh",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "---\\(more( \\d+%)?\\)---"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "set cli screen-length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "exit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "login:",
+      "password_pattern": "password:",
+      "patterns": [
+        "\\S+@\\S+>\\s*$",
+        "\\S+@\\S+#\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "juniper/junos-ssh",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}

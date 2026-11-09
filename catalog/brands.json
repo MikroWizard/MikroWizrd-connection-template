@@ -1,0 +1,146 @@
+[
+  {
+    "brand": "adtran",
+    "display_name": "Adtran"
+  },
+  {
+    "brand": "adva",
+    "display_name": "ADVA Optical"
+  },
+  {
+    "brand": "allied_telesis",
+    "display_name": "Allied Telesis"
+  },
+  {
+    "brand": "aruba",
+    "display_name": "Aruba"
+  },
+  {
+    "brand": "audiocodes",
+    "display_name": "AudioCodes"
+  },
+  {
+    "brand": "avaya",
+    "display_name": "Avaya"
+  },
+  {
+    "brand": "brocade",
+    "display_name": "Brocade"
+  },
+  {
+    "brand": "calix",
+    "display_name": "Calix"
+  },
+  {
+    "brand": "checkpoint",
+    "display_name": "Check Point"
+  },
+  {
+    "brand": "ciena",
+    "display_name": "Ciena"
+  },
+  {
+    "brand": "cisco",
+    "display_name": "Cisco"
+  },
+  {
+    "brand": "darwin",
+    "display_name": "macOS"
+  },
+  {
+    "brand": "dell",
+    "display_name": "Dell"
+  },
+  {
+    "brand": "digi",
+    "display_name": "Digi"
+  },
+  {
+    "brand": "edge_core",
+    "display_name": "Edge-Core"
+  },
+  {
+    "brand": "extreme",
+    "display_name": "Extreme Networks"
+  },
+  {
+    "brand": "fortinet",
+    "display_name": "Fortinet"
+  },
+  {
+    "brand": "freebsd",
+    "display_name": "FreeBSD"
+  },
+  {
+    "brand": "generic",
+    "display_name": "Generic"
+  },
+  {
+    "brand": "hp",
+    "display_name": "HP"
+  },
+  {
+    "brand": "huawei",
+    "display_name": "Huawei"
+  },
+  {
+    "brand": "juniper",
+    "display_name": "Juniper"
+  },
+  {
+    "brand": "linux",
+    "display_name": "Linux"
+  },
+  {
+    "brand": "mellanox",
+    "display_name": "Mellanox"
+  },
+  {
+    "brand": "mikrotik",
+    "display_name": "MikroTik"
+  },
+  {
+    "brand": "nvidia",
+    "display_name": "NVIDIA Networking"
+  },
+  {
+    "brand": "paloalto",
+    "display_name": "Palo Alto Networks"
+  },
+  {
+    "brand": "pfsense",
+    "display_name": "pfSense"
+  },
+  {
+    "brand": "rad",
+    "display_name": "RAD"
+  },
+  {
+    "brand": "ruckus",
+    "display_name": "Ruckus"
+  },
+  {
+    "brand": "siemens",
+    "display_name": "Siemens"
+  },
+  {
+    "brand": "sonicwall",
+    "display_name": "SonicWall"
+  },
+  {
+    "brand": "ubiquiti",
+    "display_name": "Ubiquiti"
+  },
+  {
+    "brand": "vyos",
+    "display_name": "VyOS"
+  },
+  {
+    "brand": "windows",
+    "display_name": "Windows"
+  },
+  {
+    "brand": "zte",
+    "display_name": "ZTE"
+  }
+]

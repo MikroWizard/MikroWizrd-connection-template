@@ -1,0 +1,82 @@
+{
+  "changelog": [
+    "Initial catalog revision (as installed by MikroWizard 2.1.x)"
+  ],
+  "content": {
+    "brand": "dell",
+    "commands": {
+      "show_arp": "show arp",
+      "show_config": "show running-config",
+      "show_interfaces": "show interfaces",
+      "show_log": "show logging",
+      "show_routing": "show ip route",
+      "show_version": "show version"
+    },
+    "config_mode": null,
+    "connection": {
+      "default_port_ssh": 22,
+      "default_port_telnet": 23,
+      "protocols": [
+        "ssh"
+      ],
+      "timeout": 60
+    },
+    "diff_exclusions": {
+      "global": [],
+      "show_config": [
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Time:\\s*.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Last configuration change at.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*System Description.*$"
+        },
+        {
+          "flags": "i",
+          "pattern": "^!\\s*Current Configuration.*$"
+        }
+      ]
+    },
+    "display_name": "Dell S4048 - SSH - No Enable",
+    "error_patterns": {
+      "patterns": [
+        "% Invalid",
+        "% Error"
+      ]
+    },
+    "os_type": "s4048-ssh",
+    "pagination": {
+      "enabled": true,
+      "key": "space",
+      "pattern": "--More--"
+    },
+    "post_disconnect": [],
+    "post_login_commands": [
+      "terminal length 0"
+    ],
+    "pre_connect": [],
+    "pre_logout_commands": [
+      "quit"
+    ],
+    "privilege_escalation": null,
+    "prompt": {
+      "login_pattern": "Login:",
+      "password_pattern": "Password:",
+      "patterns": [
+        "\\S+#\\s*$",
+        "\\S+>\\s*$"
+      ]
+    },
+    "protocol": "ssh"
+  },
+  "edition": "free",
+  "key": "dell/s4048-ssh",
+  "min_app_version": "2.1.2",
+  "previous_hashes": [],
+  "revision": 1
+}
